@@ -223,7 +223,6 @@ internal class SyncPublicRepo( string name ) : Step( name )
 			"game",
 			".editorconfig",
 			".gitattributes",
-			".gitignore",
 			"public/"
 		};
 
@@ -234,6 +233,7 @@ internal class SyncPublicRepo( string name ) : Step( name )
 
 		var renames = new Dictionary<string, string>
 		{
+			{ "public/.gitignore", ".gitignore" },
 			{ "public/README.md", "README.md" },
 			{ "public/LICENSE.md", "LICENSE.md" },
 			{ "public/CONTRIBUTING.md", "CONTRIBUTING.md" },
